@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 mat-dialog-title>Update Insurance Scheme</h2>
+    <mat-dialog-content class="mat-typography">
+        <select (change)="getSelectedScheme($event)">
+            <option *ngFor="let insuranceSchemeId of insuranceSchemeData" value="{{insuranceSchemeId?.schemeId}}">{{insuranceSchemeId.schemeId}}</option>
+        </select>
+        <form [formGroup]="updateInsuranceScheme" (ngSubmit)="updateInsuranceSchemeData(updateInsuranceScheme.value)" class="example-form">
+            <input class="form-control" type="hidden" formControlName="schemeId" [(ngModel)]="scheme.schemeId"  placeholder="Scheme ID"><br>
+            <input class="form-control" type="name" formControlName="schemeName" [(ngModel)]="scheme.schemeName" placeholder="SchemeName"><br>
+            <input class="form-control" type="number" formControlName="detailId" [(ngModel)]="scheme.detailId" placeholder="Scheme Detail Id"><br>
+            
+            <input class="form-check-input" type="radio" formControlName="isActive" value="true" checked>&nbsp;True&nbsp;
+            <input class="form-check-input" type="radio" formControlName="isActive" value="false">&nbsp;False<br><br>
+            
+            <button>Update</button>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions [align]="'end'" style="padding: 30px;">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <!-- <button mat-raised-button color="primary">Save</button> -->
+
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,23 @@
+<div>
+    <h2 mat-dialog-title>Delete Insurance Plan</h2>
+    <mat-dialog-content class="mat-typography">
+        <br>    
+        <select (change)="getSelectedPlan($event)">
+            <option *ngFor="let insurancePlanId of insurancePlanData" value="{{insurancePlanId?.planId}}">{{insurancePlanId.planId}}</option>
+        </select>
+        <form [formGroup]="deleteInsurancePlan" (ngSubmit)="deleteInsurancePlanData(deleteInsurancePlan.value)" class="example-form">
+            <input class="form-control" type="hidden" formControlName="planId" [(ngModel)]="plan.planId"  placeholder="Plan ID"><br>
+            <input class="form-control" type="name" formControlName="planName" [(ngModel)]="plan.planName" placeholder="SchemeName"><br>
+            <input class="form-control" type="number" formControlName="schemeId" [(ngModel)]="plan.schemeId" placeholder="Scheme Id"><br>
+            
+            <!-- <input class="form-check-input" type="hidden" formControlName="isActive" value="true" checked>&nbsp;&nbsp;
+            <input class="form-check-input" type="hidden" formControlName="isActive" value="false">&nbsp;<br><br> -->
+            <button>Delete</button>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions [align]="'end'" style="padding: 30px;">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button mat-raised-button color="primary">Save</button>
+
+    </mat-dialog-actions>
+</div>

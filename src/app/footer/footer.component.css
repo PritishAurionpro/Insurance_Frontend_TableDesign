@@ -1,0 +1,17 @@
+footer {
+    background-color: rgb(3, 45, 61);
+    color: white;
+    padding: 20px 0;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  p {
+    margin: 0;
+  }
+  

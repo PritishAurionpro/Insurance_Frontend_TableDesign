@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 mat-dialog-title>Add Insurance Plan</h2>
+    <mat-dialog-content class="mat-typography">
+        <br>
+        <form [formGroup]="addInsurancePlan" 
+        (ngSubmit)="addNewInsurancePlan(addInsurancePlan.value)" class="example-form">
+            <input class="form-control" id="exampleFormControlInput1" type="text" formControlName="planName" placeholder="Enter plan Name"><br>
+            
+            <input class="form-control" id="exampleFormControlInput1" type="number" formControlName="schemeId" placeholder="Enter Scheme  Id"><br>
+            
+            <input class="form-check-input" placeholder="IsActive" type="radio" formControlName="isActive" value="true">&nbsp;True&nbsp;&nbsp;
+            <input class="form-check-input" type="radio" formControlName="isActive" value="false">&nbsp;False<br><br>
+
+            <button>Submit</button>
+
+        </form>
+
+    </mat-dialog-content>
+    <mat-dialog-actions [align]="'end'" style="padding: 30px;">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <button mat-raised-button color="primary">Save</button>
+
+    </mat-dialog-actions>
+</div>

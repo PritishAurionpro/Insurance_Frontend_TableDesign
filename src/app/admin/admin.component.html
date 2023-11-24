@@ -1,0 +1,101 @@
+<app-logout-navigation></app-logout-navigation>
+
+<div class="dashboard-container">
+  <h2>Welcome {{adminName}} to Admin Dashboard</h2>
+  <div class="dashboard-content">
+    <div class="dashboard-box" (click)="navigateTo('manage-agent')">
+      <img src="assets/agent.jpg" alt="Manage Agent" height="200" width="200">
+      <h3>Manage Agent</h3>
+    </div>
+
+    <div class="dashboard-box" (click)="navigateTo('manage-employee')">
+      <img src="assets/manageEmployee.jpeg" alt="Manage Employee" height="200" width="200">
+      <h3>Manage Employee</h3>
+    </div>
+
+    <div class="dashboard-box" (click)="navigateTo('manage-insurance-plan')">
+      <img src="assets/insurance_plan.jpg" alt="Manage Insurance Plan" height="200" width="200">
+      <h3>Manage Insurance Plan</h3>
+    </div>
+
+    <div class="dashboard-box" (click)="navigateTo('manage-insurance-scheme')">
+      <img src="assets/insurance_scheme.png" alt="Manage Insurance Scheme" height="200" width="200">
+      <h3>Manage Insurance Scheme</h3>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-header></app-header> -->
+<!--
+<app-logout-navigation></app-logout-navigation>
+<div class="dashboard-container">
+  <h2>Welcome {{adminName}} to Admin Dashboard</h2>
+  <div class="dashboard-content">
+    <div class="dashboard-box">
+      <img src="assets/agentRegistration.jpeg" alt="Agent Registration">
+      <h3>Agent Registration</h3>
+      <p>Register new agents to the company.</p>
+      <a routerLink=""><button>Go to Agent Registration</button></a>
+    </div>
+
+    <div class="dashboard-box">
+      <img src="assets/agentDetails.jpeg" alt="Agent Details">
+      <h3>Edit Agent Details</h3>
+      <p>Edit and manage details of registered agents.</p>
+      <a routerLink=""><button>Go to Agent Details</button></a>
+    </div>
+    <div class="dashboard-box">
+      <img src="assets/insurance_scheme.png" alt="Manage Insurance Scheme">
+      <h3>Manage Insurance Scheme</h3>
+      <p>Add, Update and View insurance scheme policy.</p>
+      <a routerLink="/insurance-scheme"><button>Go to Manage Insurance Scheme</button></a>
+    </div>
+
+    <div class="dashboard-box">
+      <img src="assets/insurance_plan.jpg" alt="Manage Insurance Plan">
+      <h3>Manage Insurance Plan</h3>
+      <p>Add, Update and View insurance plan policy.</p>
+      <a routerLink="/insurance-plan"><button>Go to Manage Insurance Plan</button></a>
+    </div>
+    
+    <div class="dashboard-box">
+      <img src="assets/employee.jpg" alt="Employee Registration">
+      <h3>Employee Registration</h3>
+      <p>Register new employee to the company.</p>
+      <a routerLink=""><button>Go to Employee Registration</button></a>
+    </div>
+    
+    <div class="dashboard-box">
+      <img src="assets/employee_details.jpg" alt="Employee Details">
+      <h3>Edit Employee Details</h3>
+      <p>Edit and manage details of registered employee.</p>
+      <a routerLink=""><button>Go to Employee Details</button></a>
+    </div>
+
+
+
+  </div>
+</div>
+-->
+
+
+<!-- <router-outlet></router-outlet> -->
+<!--
+<app-footer></app-footer>
+-->
+
+

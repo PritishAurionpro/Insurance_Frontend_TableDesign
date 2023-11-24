@@ -1,0 +1,48 @@
+<div class="container">
+    <h2 mat-dialog-title>Update Insurance Scheme</h2>
+    <mat-dialog-content class="mat-typography">
+        <select (change)="getSelectedPolicy($event)">
+            <option *ngFor="let insurancePolicyNo of insurancePolicyData" value="{{insurancePolicyNo?.policyNo}}">{{insurancePolicyNo.policyNo}}</option>
+        </select>
+        <form [formGroup]="updateInsurancePolicy" (ngSubmit)="updateInsurancePolicyData(updateInsurancePolicy.value)" class="example-form">
+            Policy Number:<input class="form-control" type="number" formControlName="policyNo" [(ngModel)]="policy.policyNo"  placeholder="Policy Number"><br>
+
+            <mat-form-field>
+                <input matInput [matDatepicker]="issueDatePicker" formControlName="issueDate" placeholder="Enter Issue Date">
+                <mat-datepicker-toggle matSuffix [for]="issueDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #issueDatePicker></mat-datepicker>
+              </mat-form-field>
+                <br>
+            <mat-form-field>
+                <input matInput [matDatepicker]="maturityDatePicker" formControlName="maturityDate" placeholder="Enter Maturity Date">
+                <mat-datepicker-toggle matSuffix [for]="maturityDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #maturityDatePicker></mat-datepicker>
+              </mat-form-field>
+                <br>
+
+            Premium Type:<input class="form-control" type="text" formControlName="premiumType" [(ngModel)]="policy.premiumType" placeholder="premiumType"><br>
+
+            Premium Amount:<input class="form-control" type="number" formControlName="premiumAmount" [(ngModel)]="policy.premiumAmount" placeholder="premiumAmount"><br>
+
+            Sum Assured:<input class="form-control" type="number" formControlName="sumAssured" [(ngModel)]="policy.sumAssured" placeholder="sumAssured"><br>
+
+            Status:<input class="form-control" type="text" formControlName="status" [(ngModel)]="policy.status" placeholder="status"><br>
+
+            Plan Id:<input class="form-control" type="number" formControlName="planId" [(ngModel)]="policy.planId" placeholder="Plan Id"><br>
+
+            <!-- <input class="form-control" type="number" formControlName="claimId" [(ngModel)]="policy.claimId" placeholder="claimId"><br>
+            
+            <input class="form-control" type="number" formControlName="paymentId" [(ngModel)]="policy.paymentId" placeholder="paymentId"><br> -->
+            
+            IsActive:<input class="form-check-input" type="radio" formControlName="isActive" value="true" checked>&nbsp;True&nbsp;
+            <input class="form-check-input" type="radio" formControlName="isActive" value="false">&nbsp;False<br><br>
+            
+            <button>Update</button>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions [align]="'end'" style="padding: 30px;">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <!-- <button mat-raised-button color="primary">Save</button> -->
+
+    </mat-dialog-actions>
+</div>

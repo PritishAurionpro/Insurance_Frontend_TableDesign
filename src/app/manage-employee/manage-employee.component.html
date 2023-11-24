@@ -1,0 +1,54 @@
+<app-logout-navigation></app-logout-navigation>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<br><br>
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>supervised_user_circle</mat-icon>
+    </button>
+    <span>Welcome to Manage Employee </span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button (click)="openAddEmpDialog()" color="accent">Add Employee</button>
+    &nbsp;&nbsp;
+    <button mat-raised-button (click)="openUpdateEmpDialog()" color="accent">Update Employee </button>
+    &nbsp;&nbsp;
+    <button mat-raised-button (click)="openDeleteEmpDialog()" color="accent">Delete Employee </button>
+    &nbsp;&nbsp;
+</mat-toolbar>
+<div class="container"><br>
+    <h1 class="display-5" style="font-family: Georgia, 'Times New Roman', Times, serif;"> Manage Employee</h1>
+    <div style="float: left; width: 45%;">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Employee ID</th><br><br>
+                    <th>First Name</th><br><br>
+                    <th>Last Name</th><br><br>
+                    <th>MobileNo</th><br><br>
+                    <th>Email</th><br><br>
+                    <th>UserId</th><br><br>
+                    <th>Salaray</th><br><br>
+                    <!-- <th>IsActive</th><br><br> -->
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empData">
+                    <td>{{ emp.employeeId }}</td><br>
+                    <td>{{ emp.firstName }}</td><br>
+                    <td>{{ emp.lastName }}</td><br>
+                    <td>{{ emp.mobileNo }}</td><br>
+                    <td>{{ emp.email }}</td><br>
+                    <td>{{ emp.userId }}</td><br>
+                    <td>{{ emp.salary }}</td><br>
+                    <!-- <td>{{ emp.isActive }}</td><br> -->
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<app-footer></app-footer>
+  

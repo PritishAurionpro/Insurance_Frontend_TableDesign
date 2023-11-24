@@ -1,0 +1,46 @@
+<link href="https://cdn.jsdelivr.net/npm/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/zone.js"></script>
+<div class="container">
+    <h2 mat-dialog-title>Add Insurance Policy</h2>
+    <mat-dialog-content class="mat-typography">
+        <br>
+        <form [formGroup]="addInsurancePolicy" 
+        (ngSubmit)="addNewInsurancePolicy(addInsurancePolicy.value)" class="example-form">
+        <mat-form-field>
+            <input matInput [matDatepicker]="issueDatePicker" formControlName="issueDate" placeholder="Enter Issue Date">
+            <mat-datepicker-toggle matSuffix [for]="issueDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #issueDatePicker></mat-datepicker>
+          </mat-form-field>
+            <br>
+        <mat-form-field>
+            <input matInput [matDatepicker]="maturityDatePicker" formControlName="maturityDate" placeholder="Enter Maturity Date">
+            <mat-datepicker-toggle matSuffix [for]="maturityDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #maturityDatePicker></mat-datepicker>
+          </mat-form-field>
+            <br>
+            Premium Type:<input class="form-control" id="exampleFormControlInput1" type="text" formControlName="premiumType" placeholder="Enter Premium Type"><br>
+
+            Premium Amount:<input class="form-control" id="exampleFormControlInput1" type="number" formControlName="premiumAmount" placeholder="Enter Premium Amount"><br>
+
+            Sum Assured:<input class="form-control" id="exampleFormControlInput1" type="number" formControlName="sumAssured" placeholder="Enter Sum Assured"><br>
+
+            Status:<input class="form-control" id="exampleFormControlInput1" type="text" formControlName="status" placeholder="Enter Status"><br>
+
+            Plan Id:<input class="form-control" id="exampleFormControlInput1" type="number" formControlName="planId" placeholder="Enter Plan Id"><br>
+
+            
+            <input class="form-check-input" placeholder="IsActive" type="radio" formControlName="isActive" value="true">&nbsp;True&nbsp;&nbsp;
+            <input class="form-check-input" type="radio" formControlName="isActive" value="false">&nbsp;False<br><br>
+
+            <button>Submit</button>
+
+        </form>
+
+    </mat-dialog-content>
+    <mat-dialog-actions [align]="'end'" style="padding: 30px;">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <!-- <button mat-raised-button color="primary">Save</button> -->
+
+    </mat-dialog-actions>
+</div>
+

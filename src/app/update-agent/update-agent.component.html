@@ -1,0 +1,55 @@
+<div class="container">
+    <h2 mat-dialog-title>Update Agent</h2>
+    <mat-dialog-content class="mat-typography">
+        <select (change)="getSelectedAgent($event)">
+            <option *ngFor="let agentId of agentData" value="{{agentId?.agentId}}">{{agentId.agentId}}</option>
+        </select>
+        <form [formGroup]="editAgentForm" (ngSubmit)="editAgent(editAgentForm.value)" class="example-form">
+            Agent Id: <input class="form-control" type="number" placeholder="Enter agent id" formControlName="agentId" [(ngModel)]="agent.agentId">
+            <span *ngIf="agentIdValidator && agentIdValidator.invalid && agentIdValidator.touched">
+                Please enter valid agent id</span>
+            <br><br>
+            First Name: <input class="form-control" type="text" placeholder="Enter first name" formControlName="firstName" [(ngModel)]="agent.firstName">
+            <span *ngIf="firstNameValidator && firstNameValidator.invalid && firstNameValidator.touched">
+                Please enter valid first name</span>
+            <br><br>
+            Last Name: <input class="form-control" type="text" placeholder="Enter last name" formControlName="lastName" [(ngModel)]="agent.lastName" >
+            <span *ngIf="lastNameValidator && lastNameValidator.invalid && lastNameValidator.touched">
+                please enter a valid last name</span>
+            <br><br>
+            Qualification: <input class="form-control" type="text" placeholder="Enter qualification" formControlName="qualification" [(ngModel)]="agent.qualification">
+            <span *ngIf="qualificationValidator && qualificationValidator.invalid && qualificationValidator.touched">
+                please enter a valid qualification</span>
+            <br><br>
+            E-Mail: <input class="form-control" type="email" placeholder="Enter email address" formControlName="email" [(ngModel)]="agent.email">
+            <span *ngIf="emailValidator && emailValidator.invalid && emailValidator.touched">
+                please enter a valid e-mail address </span>
+            <br><br>
+            Mobile No: <input class="form-control" type="text" placeholder="Enter phone no." formControlName="mobileNo" [(ngModel)]="agent.mobileNo">
+            <span *ngIf="mobileNoValidator && mobileNoValidator.invalid && mobileNoValidator.touched">
+                please enter a valid mobile no.</span>
+            <br><br>
+            User Id: <input class="form-control" type="number" placeholder="Enter User Id" formControlName="userId" [(ngModel)]="agent.userId">
+            <span *ngIf="userIdValidator && userIdValidator.invalid && userIdValidator.touched">
+                please enter a valid user id</span>
+            <br><br>
+            Commission Earned: <input class="form-control" type="number" placeholder="Enter commission earned"
+                formControlName="commissionEarned" [(ngModel)]="agent.commissionEarned">
+            <span
+                *ngIf="commissionEarnedValidator && commissionEarnedValidator.invalid && commissionEarnedValidator.touched">
+                please enter a valid commission</span>
+            <br><br>
+            is Active:<input class="form-check-input" type="checkbox" formControlName="isActive">
+            <span *ngIf="isActiveValidator && isActiveValidator.invalid && isActiveValidator.touched">
+                please enter a valid commission</span>
+            <br><br>
+
+            <button mat-raised-button color="warn" type="submit">Update</button>
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions [align]="'end'" style="padding: 30px;">
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+        <!-- <button mat-raised-button color="primary">Save</button> -->
+
+    </mat-dialog-actions>
+</div>

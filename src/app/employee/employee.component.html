@@ -1,0 +1,104 @@
+<router-outlet></router-outlet>
+
+<app-logout-navigation></app-logout-navigation>
+
+<div class="dashboard-container">
+  <h2>Welcome {{employeeName}} to Employee Dashboard</h2>
+  <div class="dashboard-content">
+    <div class="dashboard-box" (click)="navigateTo('manage-profile')">
+      <img src="assets/manageProfile.jpeg" alt="Manage Profile" height="200" width="200">
+      <h3>Manage Profile</h3>
+    </div>
+    <div class="dashboard-box" (click)="navigateTo('manage-agent')">
+      <img src="assets/agent.jpg" alt="Manage Agent" height="200" width="200">
+      <h3>Manage Agent</h3>
+    </div>
+    <div class="dashboard-box" (click)="navigateTo('manage-customer')">
+      <img src="assets/customers.jpg" alt="Manage Customer" height="200" width="200">
+      <h3>Manage Customer</h3>
+    </div>
+
+    <div class="dashboard-box" (click)="navigateTo('manage-document')">
+      <img src="assets/manageDocument.jpg" alt="Manage Document" height="200" width="200">
+      <h3>Manage Document</h3>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="dashboard-container">
+    <h2>Welcome {{employeeName}} to Employee Dashboard</h2>
+
+  <div class="dashboard-content">
+    <div class="dashboard-box">
+      <img src="assets/agentregistration.jpg" alt="Agent Registration" height="200" width="200">
+      <h3>Agent Registration</h3>
+      <p>Register new agents to the company.</p>
+      <a routerLink="/employee/agent-registration"><button>Go to Agent Registration</button></a>
+    </div>
+
+    <div class="dashboard-box">
+      <img src="assets/manageprofile.jpg" alt="Manage Profile">
+      <h3>Manage Profile</h3>
+      <p>Update and manage your profile information.</p>
+      <a routerLink="/employee/manage-profile"><button>Go to Manage Profile</button></a>
+    </div>
+
+    <div class="dashboard-box">
+      <img src="assets/customerdetails.jpg" alt="Customer Details">
+      <h3>Edit Customer Details</h3>
+      <p>Edit and verify customer details and documents.</p>
+      <a routerLink="/employee/edit-customer-details"><button>Go to Edit Customer Details</button></a>
+    </div>
+
+    <div class="dashboard-box">
+      <img src="assets/agent.jpg" alt="Agent Details">
+      <h3>Edit Agent Details</h3>
+      <p>Edit and manage details of registered agents.</p>
+      <a routerLink="/employee/edit-agent-details"><button>Go to Agent Details</button></a>
+    </div>
+  </div>
+
+  <div class="dashboard-content">
+    <div class="dashboard-box">
+      <img src="assets/customers.jpg" alt="View Customers">
+      <h3>View Customers</h3>
+      <p>View and manage customer records.</p>
+      <a routerLink="/employee/view-customers"><button>View Customers</button></a>
+    </div>
+    <div class="dashboard-box">
+      <img src="assets/agent2.jpg" alt="View Agents">
+      <h3>View Agents</h3>
+      <p>View and manage agent records.</p>
+      <a routerLink="/employee/view-agents"><button>View Agents</button></a>
+    </div>
+    <div class="dashboard-box">
+      <img src="assets/docverify2.jpg" alt="Document Verification">
+      <h3>Document Verification</h3>
+      <p>Verify and manage customer documents.</p>
+      <a routerLink="/employee/document-verification"><button>Document Verification</button></a>
+    </div>
+    <div class="dashboard-box">
+      <img src="assets/queries.jpg" alt="View Customer Queries">
+      <h3>View Customer Queries</h3>
+      <p>View and manage customer queries.</p>
+      <a routerLink="/employee/view-customer-queries"><button>View Customer Queries</button></a>
+    </div>
+  </div>
+</div>
+-->
+<!-- <router-outlet></router-outlet> -->
+<!--<app-footer></app-footer> -->
+
+
+

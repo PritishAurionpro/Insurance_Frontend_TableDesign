@@ -1,0 +1,61 @@
+/* .insurance-policies {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(199, 221, 247);
+  }
+  
+  .insurance-policy-item {
+    width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  .insurance-policy-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .insurance-policy-item img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .policy-details {
+    margin-top: 10px;
+  }
+  
+  .coverage-info {
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .policy-features {
+    margin-top: 10px;
+  } */
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .policy-features strong {
+    color: #007bff;
+  }
+  
+  .policy-features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .policy-features ul li {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
